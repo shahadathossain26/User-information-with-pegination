@@ -11,12 +11,13 @@ const Home = () => {
     const userVisited = pageNumber * userPerPage;
     const pageCount = Math.ceil(users.length / userPerPage)
 
+    //Displaying Users
     const displayUsers = users.slice(userVisited, userVisited + userPerPage).map(user => <User
         key={user.id}
         user={user}
     ></User>)
 
-
+    //Fetching Data
     useEffect(() => {
         fetch('https://jsonplaceholder.typicode.com/users')
             .then(res => res.json())
