@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import User from '../User/User';
 import ReactPaginate from 'react-paginate';
+import './Home.css'
 
 const Home = () => {
     const [users, setUsers] = useState([]);
@@ -31,19 +32,19 @@ const Home = () => {
             <h1 className='text-5xl font-bold text-black mb-10'>Users Information</h1>
             <div className='border border-solid border-black rounded-xl shadow-xl'>
                 {displayUsers}
-
-                <ReactPaginate
-                    previousLabel={"<"}
-                    nextLabel={">"}
-                    pageCount={pageCount}
-                    onPageChange={changePage}
-                    containerClassName={"pegination"}
-                    previousLinkClassName={"previousButton"}
-                    nextLinkClassName={"nextButton"}
-                    disabledClassName={"disableButton"}
-                    activeClassName={"activeButton"}
-                ></ReactPaginate>
             </div>
+            <ReactPaginate
+                previousLabel={"<"}
+                nextLabel={">"}
+                pageCount={pageCount}
+                onPageChange={changePage}
+                containerClassName={"pegination"}
+                previousLinkClassName={"previousButton"}
+                nextLinkClassName={"nextButton"}
+                disabledClassName={"disableButton"}
+                activeClassName={"activeButton"}
+
+            ></ReactPaginate>
         </div>
     );
 };

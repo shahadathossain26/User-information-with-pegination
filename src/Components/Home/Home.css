@@ -1,0 +1,30 @@
+.pegination {
+    width: 100%;
+    height: 40px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    text-align: center;
+
+}
+
+.pegination a {
+    padding: 10px;
+    margin: 8px;
+    border: 1px solid #38bdf8;
+    border-radius: 5px;
+    color: #38bdf8;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.pegination a:hover {
+    color: white;
+    background-color: #38bdf8;
+}
+
+.activeButton a {
+    color: white;
+    background-color: #38bdf8;
+}
